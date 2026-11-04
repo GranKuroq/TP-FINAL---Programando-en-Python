@@ -1,0 +1,27 @@
+[
+    {
+        "tipo": "DispositivoEcologico",
+        "codigo": "ECO-101",
+        "nombre": "Termostato Inteligente",
+        "precio": 85.5,
+        "stock": 15
+    },
+    {
+        "tipo": "PanelSolar",
+        "codigo": "SOL-201",
+        "nombre": "Panel Monocristalino 450W",
+        "precio": 320.0,
+        "stock": 10,
+        "potencia_watts": 450,
+        "eficiencia": 21.5
+    },
+    {
+        "tipo": "PanelSolar",
+        "codigo": "SOL-202",
+        "nombre": "Panel Bifacial Industrial 600W",
+        "precio": 480.0,
+        "stock": 8,
+        "potencia_watts": 600,
+        "eficiencia": 23.0
+    }
+]
