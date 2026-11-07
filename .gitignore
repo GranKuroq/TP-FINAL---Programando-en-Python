@@ -1,0 +1,46 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entornos virtuales
+venv/
+.venv/
+env/
+ENV/
+
+# Base de datos local y archivos de Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+
+# Archivos de distribución / empaquetado
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Pruebas y cobertura
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Variables de entorno
+.env
+.env.*
+
+# Configuraciones de editores e IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+.gemini/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
