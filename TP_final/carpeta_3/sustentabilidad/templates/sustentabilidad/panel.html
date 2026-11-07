@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Sustentabilidad - {{ empresa }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #2c3e50;
+            margin: 40px;
+        }
+        .contenedor {
+            max-width: 750px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 25px 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1e8449;
+            border-bottom: 2px solid #1e8449;
+            padding-bottom: 10px;
+        }
+        .resumen {
+            background-color: #eafaf1;
+            border-left: 5px solid #27ae60;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #dcdcdc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #1e8449;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Panel de Sustentabilidad Administrativa - {{ empresa }}</h1>
+
+        <div class="resumen">
+            <p><strong>Plantas Evaluadas:</strong> {{ registros_procesados }}</p>
+            <p><strong>Total Global de Emisiones:</strong> {{ total_emisiones }} kg CO2</p>
+            <p><strong>Planta de Mayor Consumo:</strong> {{ planta_mayor_consumo }} ({{ mayor_consumo_kwh }} kWh)</p>
+        </div>
+
+        <h2>Historial de Consumos por Planta</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Planta Industrial</th>
+                    <th>Consumo (kWh)</th>
+                    <th>Emisiones (kg CO2)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in registros %}
+                <tr>
+                    <td>{{ item.planta }}</td>
+                    <td>{{ item.consumo_kwh }} kWh</td>
+                    <td>{{ item.emision_co2 }} kg CO2</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="contenedor">
+        <p><br>
+<br>
+<br>   ____██████████████
+<br>-____██▓▓▓▓▓▓▓▓▓ M ▓████
+<br>-__██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██
+<br>-__██████░░░░██░░██████
+<br>██░░░░████░░██░░░░░░░░██
+<br>██░░░░████░░░░██░░░░░░██
+<br>-__████░░░░░░██████████
+<br>-__██░░░░░░░░░░░░░██
+<br>_____██░░░░░░░░░██
+<br>-______██░░░░░░██
+<br>-____██▓▓████▓▓▓█
+<br>-_██▓▓▓▓▓▓████▓▓█
+<br>██▓▓▓▓▓▓███░░███░
+<br>-__██░░░░░░███████
+<br>-____██░░░░███████
+<br>-______██████████
+<br>-_____██▓▓▓▓▓▓▓▓▓██
+<br>-_____█████████████<br>
+        </p>
+        <h4>Developed By: Sucutrule Productions          8-)</h4>
+        
+    </div>
+</body>
+</html>
+
